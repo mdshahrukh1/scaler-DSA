@@ -1,0 +1,88 @@
+Sorting a String: https://www.interviewbit.com/blog/sort-string/
+
+
+Java:
+
+https://www.scaler.com/topics/java/string-in-java/ 
+
+https://www.interviewbit.com/courses/fast-track-java/topics/strings/ 
+
+
+
+C++:
+
+https://www.scaler.com/topics/cpp/strings-in-cpp/ 
+
+https://www.interviewbit.com/tutorial/string-implementation-details/ 
+
+
+
+Python:
+
+https://www.scaler.com/topics/python/strings-in-python/
+
+https://www.interviewbit.com/tutorial/string-implementation-details/  
+
+
+
+JavaScript:
+
+https://www.interviewbit.com/courses/fast-track-js/topics/strings-and-strings-methods/
+
+
+
+
+
+In Java, for operations where many characters need to be appended to a string, it is more efficient to use a StringBuilder or StringBuffer.. These classes are designed for such use cases because they maintain a mutable sequence of characters, and they can expand their capacity without needing to copy the contents every time a new character is added.
+
+With StringBuilder, adding a character is typically O(1) on average, making it much more efficient for concatenating strings or characters repeatedly. After all modifications, the StringBuilder can be converted back to a String using its .toString() method.
+
+Here’s a quick example of using StringBuilder for adding characters:
+
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < n; i++) {
+    sb.append('a');  // Adds a character efficiently
+}
+
+String result = sb.toString();  // Converts StringBuilder to String
+Using StringBuilder is the recommended approach when constructing strings dynamically in Java, especially in loops or where multiple concatenations are involved.
+
+
+append(): Adds data to the end of the current StringBuilder object. It can handle different types of data including strings, characters, integers, and other primitive types, as well as any object that can be represented as a string.
+
+
+
+insert(): Inserts data into the StringBuilder at a specified position.
+
+
+
+delete() and deleteCharAt(): Removes characters from the StringBuilder.
+delete(int start, int end) removes characters from start index to end-1.
+deleteCharAt(int index) removes the character at the specified index.
+
+
+
+replace(): Replaces a sequence of characters with another set of characters.
+
+
+
+reverse(): Reverses the contents of the StringBuilder.
+
+
+
+
+toString(): Converts the StringBuilder into a String.
+
+
+
+length(): Returns the length (character count) of the StringBuilder.
+
+
+
+capacity(): Returns the current capacity of the StringBuilder. The capacity is the amount of storage available for newly inserted characters, beyond which an allocation will occur.
+
+
+
+
+setLength(): Sets the length of the character sequence. If the StringBuilder was previously longer than the new length, it will be truncated.
+
